@@ -1,7 +1,3 @@
-# This command will grab json and display an array of all domain entries at one place in the cert array object (0 in this case).
-# Further iteration of the objects is needed to get all the dns_names from every cert entry
-# curl -s 'https://certspotter.com/api/v0/certs?domain=rockstargames.com' |     python -c "import sys, json; obj=json.load(sys.stdin); print '\n'.join(obj[0]['dns_names'])"
-
 #!/usr/bin/python
 import sys, json, argparse
 from subprocess import Popen, PIPE
@@ -69,7 +65,3 @@ print '\n::DIAGNOSTICS::'
 print 'Non-recursive domain list length\t\t{}'.format(len(domainlist))
 print 'Recursive domain list length\t\t\t{}'.format(len(recursivedomainlist))
 print 'Additional domains found by being recursive\t{}\n'.format(len(recursivedomainlist) - len(domainlist))
-
-## TODO: Make iterative list building optional.  
-## It adds a lot of overhead and in some cases it doesn't
-## provide any benefit such as with small businesses

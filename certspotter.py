@@ -65,4 +65,3 @@ print '\n::DIAGNOSTICS::'
 print 'Non-recursive domain list length\t\t{}'.format(len(domainlist))
 print 'Recursive domain list length\t\t\t{}'.format(len(recursivedomainlist))
 print 'Additional domains found by being recursive\t{}\n'.format(len(recursivedomainlist) - len(domainlist))
-print ''

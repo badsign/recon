@@ -1,7 +1,3 @@
-# This command will grab json and display an array of all domain entries at one place in the cert array object (0 in this case).
-# Further iteration of the objects is needed to get all the dns_names from every cert entry
-# curl -s 'https://certspotter.com/api/v0/certs?domain=rockstargames.com' |     python -c "import sys, json; obj=json.load(sys.stdin); print '\n'.join(obj[0]['dns_names'])"
-
 #!/usr/bin/python
 import sys, json, argparse
 from subprocess import Popen, PIPE
